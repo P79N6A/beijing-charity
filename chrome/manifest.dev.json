@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "name": "beijing-charity",
+  "manifest_version": 2,
+  "description": "支持工作居住证系统在chrome中运行",
+  "browser_action": {
+    "default_title": "people-helper",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "web_accessible_resources": [
+    "/js/inject.bundle.js",
+    "/js/spy.bundle.js"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [ "contextMenus", "management", "tabs", "storage", "alarms", "<all_urls>" ],
+  "content_security_policy": "default-src 'self' http://localhost:3000 https://f100.bytedance.net; script-src http://localhost:3000 https://f100.bytedance.net 'unsafe-eval' 'self'; connect-src http://localhost:3000 https://f100.bytedance.net; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+}

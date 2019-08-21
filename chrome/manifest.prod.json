@@ -1,0 +1,24 @@
+{
+  "version": "0.0.6",
+  "name": "beijing-charity",
+  "manifest_version": 2,
+  "description": "Example for react-chrome-extension-boilerplate",
+  "browser_action": {
+    "default_title": "people helper",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "web_accessible_resources": [
+    "/js/inject.bundle.js",
+    "/js/spy.bundle.js"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [ "contextMenus", "tabs", "storage", "alarms", "<all_urls>" ],
+  "content_security_policy": "default-src 'self'; script-src 'self'; connect-src https://f100.bytedance.net; style-src * 'unsafe-inline'; img-src 'self' data:;"
+}
